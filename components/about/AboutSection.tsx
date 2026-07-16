@@ -1,0 +1,60 @@
+'use client';
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Typography } from '../ui/Typography';
+
+export function AboutSection() {
+    return (
+        <section id="about" className="py-32 px-6 md:px-12 w-full max-w-[1440px] mx-auto">
+            <div className="flex flex-col items-center justify-center text-center max-w-4xl mx-auto mb-32">
+                <motion.div 
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                >
+                    <Typography variant="h2" className="leading-[1.1] mb-8">
+                        Design isn&apos;t decoration. <br/>
+                        <span className="text-[var(--color-text-muted)]">It&apos;s communication.</span>
+                    </Typography>
+                </motion.div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                <div className="md:col-span-5 md:col-start-2 relative h-[60vh] rounded-[var(--radius-image)] overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-tr from-[var(--color-surface)] to-[var(--color-border-default)] mix-blend-multiply" />
+                    {/* Placeholder for editorial portrait */}
+                    <div className="w-full h-full bg-[var(--color-border-soft)]" />
+                    
+                    {/* Floating stat overlapping */}
+                    <motion.div 
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3, duration: 0.6 }}
+                        className="absolute bottom-10 -right-10 md:-right-16 bg-[var(--color-card)] p-6 rounded-[var(--radius-card)] shadow-floating border border-[var(--color-border-soft)]"
+                    >
+                        <div className="text-[48px] font-heading font-bold leading-none mb-1">3</div>
+                        <div className="text-[12px] uppercase tracking-widest text-[var(--color-text-secondary)]">Years Experience</div>
+                    </motion.div>
+                </div>
+                
+                <div className="md:col-span-4 md:col-start-8 flex flex-col gap-12 mt-16 md:mt-0">
+                    <div>
+                        <div className="text-[64px] font-heading font-bold leading-none mb-2 text-[var(--color-text-primary)]">20+</div>
+                        <div className="text-[14px] uppercase tracking-widest text-[var(--color-text-secondary)] border-b border-[var(--color-border-default)] pb-4">Projects Delivered</div>
+                    </div>
+                    <div>
+                        <div className="text-[64px] font-heading font-bold leading-none mb-2 text-[var(--color-text-primary)]">12</div>
+                        <div className="text-[14px] uppercase tracking-widest text-[var(--color-text-secondary)] border-b border-[var(--color-border-default)] pb-4">Global Brands</div>
+                    </div>
+                    <div>
+                        <div className="text-[64px] font-heading font-bold leading-none mb-2 text-[var(--color-text-primary)]">8</div>
+                        <div className="text-[14px] uppercase tracking-widest text-[var(--color-text-secondary)] border-b border-[var(--color-border-default)] pb-4">Industries Served</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+}
