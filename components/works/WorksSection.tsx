@@ -20,7 +20,7 @@ const PROJECTS = [
     {
         title: 'IdeasToSites Impact',
         category: 'Product Design',
-        imageSrc: '/images/projects/ideastosites.png',
+        imageSrc: '/images/projects/its ann1.png',
         story: 'Beautiful design should always serve a purpose. This piece tells the story of a design venture that helped over two hundred brands scale while empowering a community of rising digital creators.',
         deliverables: ['Product Design', 'Community Platform', 'Web Development']
     }

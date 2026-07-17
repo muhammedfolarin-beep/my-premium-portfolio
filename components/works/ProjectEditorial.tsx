@@ -49,8 +49,8 @@ export function ProjectEditorial({ index, title, category, story, deliverables, 
     );
 
     const imageContent = (
-        <div className="w-full lg:w-1/2 h-[50vh] lg:h-[70vh] relative rounded-[var(--radius-image)] overflow-hidden group bg-[var(--color-surface)]">
-            <Image src={imageSrc} alt={title} fill className="object-contain transition-transform duration-700 group-hover:scale-105 p-8" />
+        <div className="w-full lg:w-1/2 h-[50vh] lg:h-[70vh] relative rounded-[var(--radius-image)] overflow-hidden group bg-[var(--color-surface)]/80 backdrop-blur-md border border-[var(--color-border-soft)] shadow-floating">
+            <Image src={imageSrc} alt={title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-tr from-[var(--color-border-default)] to-[var(--color-surface)] transition-transform duration-700 group-hover:scale-105 mix-blend-multiply pointer-events-none" />
             
             {/* Hover brighten overlay */}
