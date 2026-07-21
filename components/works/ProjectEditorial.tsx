@@ -12,7 +12,7 @@ interface ProjectProps {
     category: string;
     story: string;
     deliverables: string[];
-    imageSrc: string;
+    imageSrc: any;
     align: 'left' | 'right';
 }
 

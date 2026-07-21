@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Typography } from '../ui/Typography';
 
+import workspaceImg from '@/public/images/workspace.png';
+
 export function AboutSection() {
     return (
         <section id="about" className="py-32 px-6 md:px-12 w-full max-w-[1440px] mx-auto">
@@ -25,7 +27,7 @@ export function AboutSection() {
             <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
                 <div className="md:col-span-5 md:col-start-2 relative h-[60vh] rounded-[var(--radius-image)] overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-tr from-[var(--color-surface)] to-[var(--color-border-default)] mix-blend-multiply opacity-50 dark:hidden z-10 pointer-events-none" />
-                    <Image src="/images/workspace.png" alt="Editorial Workspace" fill className="object-cover" priority />
+                    <Image src={workspaceImg} alt="Editorial Workspace" fill className="object-cover" priority />
                     
                     {/* Floating stat overlapping */}
                     <motion.div 
@@ -33,7 +35,7 @@ export function AboutSection() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.3, duration: 0.6 }}
-                        className="absolute bottom-4 right-4 md:bottom-10 md:-right-16 bg-[var(--color-card)] p-4 md:p-6 rounded-[var(--radius-card)] shadow-floating border border-[var(--color-border-soft)]"
+                        className="absolute bottom-4 right-4 md:bottom-10 md:-right-16 bg-[var(--color-card)] p-4 md:p-6 rounded-[var(--radius-card)] shadow-floating border border-[var(--color-border-soft)] z-20"
                     >
                         <div className="text-4xl md:text-[48px] font-heading font-bold leading-none mb-1">3+</div>
                         <div className="text-[10px] md:text-[12px] uppercase tracking-widest text-[var(--color-text-secondary)]">Years Experience</div>

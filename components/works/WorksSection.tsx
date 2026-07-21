@@ -2,25 +2,29 @@ import React from 'react';
 import { Typography } from '../ui/Typography';
 import { ProjectEditorial } from './ProjectEditorial';
 
+import fluxImg from '@/public/images/projects/flux.png';
+import dreamlineImg from '@/public/images/projects/Dreamlline Brandkit.png';
+import itsImg from '@/public/images/projects/its ann1.png';
+
 const PROJECTS = [
     {
         title: 'Flux E-Commerce',
         category: 'E-Commerce',
-        imageSrc: '/images/projects/flux.png',
+        imageSrc: fluxImg,
         story: 'A vibrant, high-energy interface designed to make premium gear feel alive on the screen. By balancing bold color blocks with clean, spacious grids, this concept transforms a simple browsing experience into an engaging digital flagship store.',
         deliverables: ['UI/UX Design', 'Interaction Design', 'Web Design']
     },
     {
         title: 'Dreamline Identity',
         category: 'Brand Identity',
-        imageSrc: '/images/projects/Dreamlline Brandkit.png',
+        imageSrc: dreamlineImg,
         story: 'Great branding is about more than just a logo. This project takes a sophisticated warm color palette and builds a unified brand journey, showing how a single design concept flows effortlessly across business stationery, apparel, and physical products.',
         deliverables: ['Logo Design', 'Brand Strategy', 'Visual Ecosystem']
     },
     {
         title: 'IdeasToSites Impact',
         category: 'Product Design',
-        imageSrc: '/images/projects/its ann1.png',
+        imageSrc: itsImg,
         story: 'Beautiful design should always serve a purpose. This piece tells the story of a design venture that helped over two hundred brands scale while empowering a community of rising digital creators.',
         deliverables: ['Product Design', 'Community Platform', 'Web Development']
     }

@@ -7,6 +7,8 @@ import { Typography } from '../ui/Typography';
 import { Badge } from '../ui/Badge';
 import Image from 'next/image';
 
+import profileImg from '@/public/images/profile-1.png';
+
 export function HeroSection() {
     // Parallax mouse setup
     const mouseX = useMotionValue(0);
@@ -147,7 +149,7 @@ export function HeroSection() {
                         animate={{ scale: 1, opacity: 1, y: 0 }}
                         transition={{ delay: 0.5, duration: 1.5, ease: "easeOut" }}
                     >
-                        <Image src="/images/profile-1.png" alt="Folarin Portrait" fill className="object-cover" priority />
+                        <Image src={profileImg} alt="Folarin Portrait" fill className="object-cover" priority />
                         <div className="absolute inset-0 bg-gradient-to-tr from-[var(--color-surface)] to-transparent mix-blend-multiply dark:hidden pointer-events-none" />
                     </motion.div>
                 </div>
