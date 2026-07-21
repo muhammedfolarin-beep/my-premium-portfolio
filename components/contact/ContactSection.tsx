@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Typography } from '../ui/Typography';
 import { Button } from '../ui/Button';
@@ -28,9 +29,11 @@ export function ContactSection() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.3 }}
                 >
-                    <Button variant="primary" size="lg" className="text-[18px] px-8 py-5">
-                        Schedule a Call
-                    </Button>
+                    <Link href="/contact">
+                        <Button variant="primary" size="lg" className="text-[18px] px-8 py-5">
+                            Schedule a Call
+                        </Button>
+                    </Link>
                 </motion.div>
                 
                 <motion.div 
@@ -40,10 +43,10 @@ export function ContactSection() {
                     transition={{ duration: 0.8, delay: 0.6 }}
                     className="mt-24 flex flex-wrap justify-center gap-8 text-[14px] uppercase tracking-widest text-[var(--color-text-secondary)]"
                 >
-                    <a href="mailto:hello@example.com" className="hover:text-[var(--color-text-primary)] transition-colors">Email</a>
-                    <a href="#" className="hover:text-[var(--color-text-primary)] transition-colors">LinkedIn</a>
+                    <a href="mailto:muhammed.folarin@gmail.com" className="hover:text-[var(--color-text-primary)] transition-colors">Email</a>
+                    <a href="https://www.linkedin.com/in/folarin-muhammed-48a3a1277/" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-text-primary)] transition-colors">LinkedIn</a>
                     <a href="#" className="hover:text-[var(--color-text-primary)] transition-colors">Behance</a>
-                    <a href="#" className="hover:text-[var(--color-text-primary)] transition-colors">GitHub</a>
+                    <a href="https://www.instagram.com/phorlarin10/" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-text-primary)] transition-colors">Instagram</a>
                 </motion.div>
             </div>
         </section>

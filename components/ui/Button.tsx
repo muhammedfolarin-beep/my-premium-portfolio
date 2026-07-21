@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion, HTMLMotionProps } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { MagneticButton } from './MagneticButton';
 
 export interface ButtonProps extends HTMLMotionProps<"button"> {
     variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
@@ -12,7 +13,7 @@ export interface ButtonProps extends HTMLMotionProps<"button"> {
 }
 
 export function Button({ variant = 'primary', size = 'md', withArrow = false, className = '', children, ...props }: ButtonProps) {
-    const baseStyles = 'group inline-flex items-center justify-center font-medium rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[var(--color-background)] focus:ring-[var(--color-text-primary)]';
+    const baseStyles = 'group inline-flex items-center justify-center font-medium rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[var(--color-background)] focus:ring-[var(--color-text-primary)] cursor-none';
 
     const variants = {
         primary: 'bg-[var(--color-text-primary)] text-[var(--color-background)] hover:bg-[var(--color-accent-hover)]',
@@ -28,15 +29,17 @@ export function Button({ variant = 'primary', size = 'md', withArrow = false, cl
     };
 
     return (
-        <motion.button
-            whileTap={{ scale: 0.98 }}
-            className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
-            {...props}
-        >
-            {children}
-            {withArrow && (
-                <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-            )}
-        </motion.button>
+        <MagneticButton>
+            <motion.button
+                whileTap={{ scale: 0.98 }}
+                className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
+                {...props}
+            >
+                {children}
+                {withArrow && (
+                    <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                )}
+            </motion.button>
+        </MagneticButton>
     );
 }

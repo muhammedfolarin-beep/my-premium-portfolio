@@ -1,6 +1,18 @@
 @import "tailwindcss";
 
 @theme {
+  --font-sans: var(--font-dm-sans);
+  --font-heading: var(--font-syne);
+
+  --radius-card: 28px;
+  --radius-button: 999px;
+  --radius-image: 28px;
+}
+
+:root {
+  --background: #FAFAFA;
+  --foreground: #1C1917;
+  
   --color-background: #FAFAFA;
   --color-surface: #F5F5F4;
   --color-card: #FFFFFF;
@@ -18,23 +30,34 @@
   --color-border-soft: #F5F5F4;
   --color-border-default: #E7E5E4;
   --color-border-strong: #D6D3D1;
-
-  --font-sans: var(--font-dm-sans);
-  --font-heading: var(--font-syne);
-
-  --radius-card: 28px;
-  --radius-button: 999px;
-  --radius-image: 28px;
 }
 
-:root {
-  --background: #FAFAFA;
-  --foreground: #1C1917;
+.dark {
+  --background: #1C1917;
+  --foreground: #FAFAFA;
+  
+  --color-background: #1C1917;
+  --color-surface: #292524;
+  --color-card: #221F1E;
+
+  --color-text-primary: #FAFAFA;
+  --color-text-secondary: #D6D3D1;
+  --color-text-muted: #A8A29E;
+  --color-text-placeholder: #78716C;
+
+  --color-accent-primary: #E7E5E4;
+  --color-accent-hover: #FAFAFA;
+  --color-accent-light: #A8A29E;
+  --color-accent-disabled: #57534E;
+
+  --color-border-soft: #292524;
+  --color-border-default: #44403C;
+  --color-border-strong: #57534E;
 }
 
 html, body {
-  background-color: var(--background);
-  color: var(--foreground);
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
   font-family: var(--font-sans), sans-serif;
   line-height: 1.65; /* 165% */
   -webkit-font-smoothing: antialiased;
@@ -49,8 +72,8 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 /* Base resets & utilities */
 ::selection {
-  background-color: #1C1917;
-  color: #FAFAFA;
+  background-color: var(--color-text-primary);
+  color: var(--color-background);
 }
 
 /* Lenis Recommended CSS */
@@ -80,11 +103,16 @@ html.lenis, html.lenis body {
 }
 .bg-grain::before {
   content: "";
-  position: absolute;
+  position: fixed;
   inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
   opacity: 0.4;
   pointer-events: none;
   z-index: 50;
   mix-blend-mode: multiply;
+}
+
+.dark .bg-grain::before {
+  opacity: 0.25;
+  mix-blend-mode: overlay;
 }

@@ -17,9 +17,9 @@ export function Footer() {
                 <div className="flex flex-col md:flex-row justify-between w-full pt-12 border-t border-[var(--color-text-secondary)]/30 text-[14px] text-[var(--color-text-muted)]">
                     <p>&copy; {new Date().getFullYear()} Folarin. All rights reserved.</p>
                     <div className="flex gap-6 mt-4 md:mt-0">
-                        <a href="#" className="hover:text-[var(--color-background)] transition-colors">LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/folarin-muhammed-48a3a1277/" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-background)] transition-colors">LinkedIn</a>
                         <a href="#" className="hover:text-[var(--color-background)] transition-colors">Behance</a>
-                        <a href="#" className="hover:text-[var(--color-background)] transition-colors">Twitter</a>
+                        <a href="https://www.instagram.com/phorlarin10/" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-background)] transition-colors">Instagram</a>
                     </div>
                 </div>
             </div>
