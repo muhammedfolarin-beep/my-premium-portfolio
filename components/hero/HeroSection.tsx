@@ -74,10 +74,10 @@ export function HeroSection() {
             {/* Soft radial gradient background */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(var(--color-accent-primary-rgb),0.03)_0%,transparent_50%)]" />
             
-            <div className="max-w-[1440px] w-full grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8 items-center z-10">
+            <div className="max-w-[1440px] w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center z-10">
                 {/* Left Side */}
                 <motion.div 
-                    className="flex flex-col items-start gap-8 max-w-2xl"
+                    className="flex flex-col items-start gap-8 max-w-2xl order-1 relative z-30"
                     variants={containerVariants}
                     initial="hidden"
                     animate="visible"
@@ -110,17 +110,18 @@ export function HeroSection() {
                         </Typography>
                     </motion.div>
                     
-                    <motion.div variants={fadeVariants} className="flex gap-4 pt-4">
+                    {/* Desktop Buttons */}
+                    <motion.div variants={fadeVariants} className="hidden lg:flex gap-4 pt-4">
                         <Button variant="primary" size="lg" withArrow>View Works</Button>
                         <Button variant="outline" size="lg">About Me</Button>
                     </motion.div>
                 </motion.div>
 
                 {/* Right Side */}
-                <div className="relative h-[40vh] md:h-[60vh] lg:h-[80vh] w-full flex items-center justify-center">
+                <div className="relative w-full flex items-center justify-center order-2 py-8 lg:py-0 lg:h-[80vh]">
                     {/* Floating elements */}
                     <motion.div 
-                        className="absolute top-4 right-4 md:top-10 md:right-10 z-20 bg-[var(--color-surface)]/80 backdrop-blur-md border border-[var(--color-border-soft)] p-3 md:p-4 rounded-2xl shadow-floating"
+                        className="absolute top-0 right-4 md:top-10 md:right-10 z-20 bg-[var(--color-surface)]/80 backdrop-blur-md border border-[var(--color-border-soft)] p-3 md:p-4 rounded-2xl shadow-floating"
                         style={{ x: layer2X, y: layer2Y }}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -131,7 +132,7 @@ export function HeroSection() {
                     </motion.div>
                     
                     <motion.div 
-                        className="absolute bottom-10 left-4 md:bottom-20 md:left-10 z-20 bg-[var(--color-surface)]/80 backdrop-blur-md border border-[var(--color-border-soft)] p-3 md:p-4 rounded-2xl shadow-floating"
+                        className="absolute bottom-4 left-4 md:bottom-20 md:left-10 z-20 bg-[var(--color-surface)]/80 backdrop-blur-md border border-[var(--color-border-soft)] p-3 md:p-4 rounded-2xl shadow-floating"
                         style={{ x: layer2X, y: layer2Y }}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -153,6 +154,17 @@ export function HeroSection() {
                         <div className="absolute inset-0 bg-gradient-to-tr from-[var(--color-surface)] to-transparent mix-blend-multiply dark:hidden pointer-events-none" />
                     </motion.div>
                 </div>
+
+                {/* Mobile Buttons */}
+                <motion.div 
+                    className="flex lg:hidden flex-col sm:flex-row gap-4 w-full order-3 relative z-30 pt-4"
+                    variants={fadeVariants}
+                    initial="hidden"
+                    animate="visible"
+                >
+                    <Button variant="primary" size="lg" className="w-full justify-center" withArrow>View Works</Button>
+                    <Button variant="outline" size="lg" className="w-full justify-center">About Me</Button>
+                </motion.div>
             </div>
         </section>
     );
