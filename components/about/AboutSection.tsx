@@ -9,7 +9,7 @@ import workspaceImg from '@/public/images/workspace.png';
 
 export function AboutSection() {
     return (
-        <section id="about" className="py-32 px-6 md:px-12 w-full max-w-[1440px] mx-auto">
+        <section id="about" className="py-16 md:py-32 px-6 md:px-12 w-full max-w-[1440px] mx-auto">
             <div className="flex flex-col items-center justify-center text-center max-w-4xl mx-auto mb-32">
                 <motion.div 
                     initial={{ opacity: 0, y: 30 }}
@@ -25,7 +25,7 @@ export function AboutSection() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-                <div className="md:col-span-5 md:col-start-2 relative h-[60vh] rounded-[var(--radius-image)] overflow-hidden">
+                <div className="md:col-span-5 md:col-start-2 relative h-[40vh] md:h-[60vh] rounded-[var(--radius-image)] overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-tr from-[var(--color-surface)] to-[var(--color-border-default)] mix-blend-multiply opacity-50 dark:hidden z-10 pointer-events-none" />
                     <Image src={workspaceImg} alt="Editorial Workspace" fill className="object-cover" priority />
                     
@@ -44,11 +44,11 @@ export function AboutSection() {
                 
                 <div className="md:col-span-4 md:col-start-8 flex flex-col gap-12 mt-16 md:mt-0 px-4 md:px-0">
                     <div>
-                        <div className="text-5xl md:text-[64px] font-heading font-bold leading-none mb-2 text-[var(--color-text-primary)]">20+</div>
+                        <div className="text-4xl md:text-[64px] font-heading font-bold leading-none mb-2 text-[var(--color-text-primary)]">20+</div>
                         <div className="text-[12px] md:text-[14px] uppercase tracking-widest text-[var(--color-text-secondary)] border-b border-[var(--color-border-default)] pb-4">Projects Delivered</div>
                     </div>
                     <div>
-                        <div className="text-5xl md:text-[64px] font-heading font-bold leading-none mb-2 text-[var(--color-text-primary)]">98%</div>
+                        <div className="text-4xl md:text-[64px] font-heading font-bold leading-none mb-2 text-[var(--color-text-primary)]">98%</div>
                         <div className="text-[12px] md:text-[14px] uppercase tracking-widest text-[var(--color-text-secondary)] border-b border-[var(--color-border-default)] pb-4">Client Satisfaction</div>
                     </div>
                 </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Typography } from '@/components/ui/Typography';
 import { Button } from '@/components/ui/Button';
+import { Footer } from '@/components/footer/Footer';
 
 export const metadata = {
     title: 'Contact | Folarin',
@@ -9,7 +10,8 @@ export const metadata = {
 
 export default function ContactPage() {
     return (
-        <main className="relative min-h-screen pt-32 pb-24 px-6 md:px-12 w-full max-w-[1440px] mx-auto flex items-center">
+        <div className="flex flex-col w-full">
+            <main className="relative min-h-screen pt-32 pb-24 px-6 md:px-12 w-full max-w-[1440px] mx-auto flex items-center">
             {/* Back Button */}
             <div className="absolute top-12 left-6 md:left-12">
                 <Link href="/">
@@ -117,6 +119,8 @@ export default function ContactPage() {
                 </div>
 
             </div>
-        </main>
+            </main>
+            <Footer />
+        </div>
     );
 }

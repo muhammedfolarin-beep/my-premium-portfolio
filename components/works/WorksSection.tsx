@@ -32,7 +32,7 @@ const PROJECTS = [
 
 export function WorksSection() {
     return (
-        <section id="work" className="py-32 px-6 md:px-12 w-full max-w-[1440px] mx-auto">
+        <section id="work" className="py-16 md:py-32 px-6 md:px-12 w-full max-w-[1440px] mx-auto">
             <div className="mb-24 flex flex-col gap-8">
                 <Typography variant="h2" className="max-w-3xl">
                     Selected work <span className="text-[var(--color-text-muted)]">that challenges the ordinary.</span>

@@ -28,7 +28,7 @@ export function ServicesSection() {
     const [expandedIndex, setExpandedIndex] = useState<number | null>(0);
 
     return (
-        <section id="services" className="py-32 px-6 md:px-12 w-full max-w-[1440px] mx-auto bg-[var(--color-surface)] rounded-[var(--radius-card)] my-12">
+        <section id="services" className="py-16 md:py-32 px-6 md:px-12 w-full max-w-[1440px] mx-auto bg-[var(--color-surface)] rounded-[var(--radius-card)] my-12">
             <div className="flex flex-col lg:flex-row gap-16 lg:gap-8">
                 <div className="w-full lg:w-1/3">
                     <Typography variant="h2" className="sticky top-32">

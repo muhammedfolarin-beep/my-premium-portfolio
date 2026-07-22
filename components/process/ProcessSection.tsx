@@ -14,7 +14,7 @@ const PROCESS_STEPS = [
 
 export function ProcessSection() {
     return (
-        <section id="process" className="py-32 px-6 md:px-12 w-full max-w-[1440px] mx-auto">
+        <section id="process" className="py-16 md:py-32 px-6 md:px-12 w-full max-w-[1440px] mx-auto">
             <div className="mb-24 text-center">
                 <Typography variant="h2">
                     The <span className="text-[var(--color-text-muted)]">Process</span>

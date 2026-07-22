@@ -70,7 +70,7 @@ export function HeroSection() {
     };
 
     return (
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 md:px-12 pt-32 pb-24">
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 md:px-12 pt-32 pb-16 md:pb-24">
             {/* Soft radial gradient background */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(var(--color-accent-primary-rgb),0.03)_0%,transparent_50%)]" />
             
@@ -117,10 +117,10 @@ export function HeroSection() {
                 </motion.div>
 
                 {/* Right Side */}
-                <div className="relative h-[60vh] lg:h-[80vh] w-full flex items-center justify-center">
+                <div className="relative h-[40vh] md:h-[60vh] lg:h-[80vh] w-full flex items-center justify-center">
                     {/* Floating elements */}
                     <motion.div 
-                        className="absolute top-10 right-10 z-20 bg-[var(--color-surface)]/80 backdrop-blur-md border border-[var(--color-border-soft)] p-4 rounded-2xl shadow-floating"
+                        className="absolute top-4 right-4 md:top-10 md:right-10 z-20 bg-[var(--color-surface)]/80 backdrop-blur-md border border-[var(--color-border-soft)] p-3 md:p-4 rounded-2xl shadow-floating"
                         style={{ x: layer2X, y: layer2Y }}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -131,7 +131,7 @@ export function HeroSection() {
                     </motion.div>
                     
                     <motion.div 
-                        className="absolute bottom-20 left-10 z-20 bg-[var(--color-surface)]/80 backdrop-blur-md border border-[var(--color-border-soft)] p-4 rounded-2xl shadow-floating"
+                        className="absolute bottom-10 left-4 md:bottom-20 md:left-10 z-20 bg-[var(--color-surface)]/80 backdrop-blur-md border border-[var(--color-border-soft)] p-3 md:p-4 rounded-2xl shadow-floating"
                         style={{ x: layer2X, y: layer2Y }}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}

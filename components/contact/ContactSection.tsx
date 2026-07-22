@@ -8,7 +8,7 @@ import { Button } from '../ui/Button';
 
 export function ContactSection() {
     return (
-        <section id="contact" className="py-32 px-6 md:px-12 w-full max-w-[1440px] mx-auto min-h-[80vh] flex flex-col justify-center">
+        <section id="contact" className="py-16 md:py-32 px-6 md:px-12 w-full max-w-[1440px] mx-auto min-h-[80vh] flex flex-col justify-center">
             <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
@@ -17,7 +17,7 @@ export function ContactSection() {
                     transition={{ duration: 0.8 }}
                     className="mb-12"
                 >
-                    <Typography variant="h1" className="leading-[0.9] text-[64px] md:text-[96px] lg:text-[120px]">
+                    <Typography variant="h1" className="leading-[0.9] text-[48px] md:text-[96px] lg:text-[120px]">
                         Let&apos;s create <br />
                         <span className="text-[var(--color-text-muted)]">something remarkable.</span>
                     </Typography>

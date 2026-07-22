@@ -8,11 +8,11 @@ import { SkillsSection } from '@/components/skills/SkillsSection';
 import { TestimonialsSection } from '@/components/testimonials/TestimonialsSection';
 import { ContactSection } from '@/components/contact/ContactSection';
 import { Footer } from '@/components/footer/Footer';
-
+      <Navbar />
 export default function HomePage() {
   return (
     <div className="flex flex-col items-center">
-      <Navbar />
+
       <HeroSection />
       <WorksSection />
       <ServicesSection />

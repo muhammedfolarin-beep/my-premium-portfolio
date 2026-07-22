@@ -36,7 +36,7 @@ export function TestimonialsSection() {
     const x = useTransform(scrollYProgress, [0, 1], ['0%', '-50%']);
 
     return (
-        <section id="testimonials" ref={containerRef} className="py-32 overflow-hidden w-full bg-[var(--color-text-primary)] text-[var(--color-background)] rounded-[var(--radius-card)] my-12 max-w-[1440px] mx-auto">
+        <section id="testimonials" ref={containerRef} className="py-16 md:py-32 overflow-hidden w-full bg-[var(--color-text-primary)] text-[var(--color-background)] rounded-[var(--radius-card)] my-12 max-w-[1440px] mx-auto">
             <div className="px-6 md:px-12 mb-24">
                 <Typography variant="h2" className="text-[var(--color-background)]">
                     Client <span className="text-[var(--color-text-muted)]">Perspectives</span>
@@ -45,7 +45,7 @@ export function TestimonialsSection() {
             
             <motion.div style={{ x }} className="flex gap-8 px-6 md:px-12 w-max">
                 {TESTIMONIALS.map((t, idx) => (
-                    <div key={idx} className="w-[85vw] md:w-[60vw] lg:w-[40vw] max-w-[600px] flex flex-col gap-12 bg-[var(--color-accent-hover)] p-12 rounded-[var(--radius-card)] border border-[var(--color-text-secondary)]/30">
+                    <div key={idx} className="w-[85vw] md:w-[60vw] lg:w-[40vw] max-w-[600px] flex flex-col gap-12 bg-[var(--color-accent-hover)] p-8 md:p-12 rounded-[var(--radius-card)] border border-[var(--color-text-secondary)]/30">
                         <Typography variant="h3" className="text-[var(--color-background)] leading-tight text-[24px] md:text-[32px]">
                             &quot;{t.quote}&quot;
                         </Typography>

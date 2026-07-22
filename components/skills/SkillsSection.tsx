@@ -12,7 +12,7 @@ const SKILLS = [
 
 export function SkillsSection() {
     return (
-        <section id="skills" className="py-32 px-6 md:px-12 w-full max-w-[1440px] mx-auto bg-[var(--color-surface)] rounded-[var(--radius-card)] my-12 overflow-hidden">
+        <section id="skills" className="py-16 md:py-32 px-6 md:px-12 w-full max-w-[1440px] mx-auto bg-[var(--color-surface)] rounded-[var(--radius-card)] my-12 overflow-hidden">
             <div className="text-center mb-16">
                 <Typography variant="h2">
                     Toolkit & <span className="text-[var(--color-text-muted)]">Capabilities</span>
